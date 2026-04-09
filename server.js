@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5005;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://dmtart.pro/kosa'],
+  origin: ['http://localhost:3000', 'http://dmtart.pro/kosa', 'https://dmtart.pro/kosa'],
   credentials: true
 }));
 app.use(express.json());
