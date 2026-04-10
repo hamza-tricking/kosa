@@ -8,13 +8,17 @@ const PORT = process.env.PORT || 5005;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://localhost:3000', 'http://dmtart.pro/kosa', 'https://dmtart.pro/kosa'],
-  credentials: true
+  origin: ['http://localhost:3000', 'https://localhost:3000', 'http://dmtart.pro/kosa', 'https://dmtart.pro/kosa', 'http://dmtart.pro', 'https://dmtart.pro'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, {
+  suppressReservedKeysWarning: true
+})
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log('MongoDB connection error:', err));
 

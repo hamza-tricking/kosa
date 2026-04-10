@@ -47,7 +47,8 @@ const productSchema = new mongoose.Schema({
     }
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  suppressReservedKeysWarning: true
 });
 
 module.exports = mongoose.model('Product', productSchema);
