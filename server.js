@@ -8,7 +8,17 @@ const PORT = process.env.PORT || 5005;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://localhost:3000', 'http://dmtart.pro/kosa', 'https://dmtart.pro/kosa', 'http://dmtart.pro', 'https://dmtart.pro'],
+  origin: [
+    'http://localhost:3000', 
+    'https://localhost:3000',
+    'http://dmtart.pro/kosa', 
+    'https://dmtart.pro/kosa', 
+    'http://dmtart.pro', 
+    'https://dmtart.pro',
+    'https://kosa-cosm.dz',
+    'https://www.kosa-cosm.com',
+    'https://kosafinal.vercel.app'
+  ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
