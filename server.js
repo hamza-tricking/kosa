@@ -16,6 +16,7 @@ app.use(cors({
     'http://dmtart.pro', 
     'https://dmtart.pro',
     'https://kosa-cosm.dz',
+    'https://www.kosa-cosm.dz',
     'https://www.kosa-cosm.com',
     'https://kosafinal.vercel.app'
   ],
